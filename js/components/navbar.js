@@ -5,8 +5,8 @@ export const navbarComponent =
         <div class="d-flex flex-column align-items-center justify-content-center">
             <h1 class="fw-bolder fs-1">Cervejaria Caneco Cheio</h1>
             <div class="d-flex flex-row mt-3">
-                <button class="btn fw-bold">Home</button>
-                <button class="btn fw-bold">Quem somos</button>
+                <button class="btn fw-bold"><a class="text-dark text-decoration-none" href="index.html">Home</a></button>
+                <button class="btn fw-bold"><a class="text-dark text-decoration-none" href="sobre.html">Quem somos</a></button>
                 <button class="btn fw-bold">Perfil</button>
             </div>
         </div>
