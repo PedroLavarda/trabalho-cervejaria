@@ -15,3 +15,28 @@ html, body {
     height: 150px;
     width: 170px;
 }
+
+.banner-image {
+    width: 100%;
+    background-image: url("https://www.lojamuseudagula.com.br/media/upload/ckeditor/2020/05/15/2020-05-15-post-mdg-virt-artesanal.jpg");
+    height: 405px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 60%;
+    height: 5rem;
+}
+
+.banner-text h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.banner-text p {
+    font-size: larger;
+}
