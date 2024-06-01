@@ -3,7 +3,7 @@ fetch("/products.json")
     .then((data) => {
         const topProducts = document.getElementById("load-essentials");
 
-        let j = 7;
+        let j = 6;
         let count = 0;
 
         for(let i = 0; i < 1; i++) {

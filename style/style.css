@@ -7,6 +7,12 @@ html, body {
     margin: 0;
 }
 
+.separating-line {
+    background-color: #a19f9f;
+    height: 1px;
+    width: 100%;
+}
+
 .body-login {
     background-color: rgb(226, 224, 224);
 }
@@ -19,7 +25,7 @@ html, body {
 .banner-image {
     width: 100%;
     background-image: url("https://www.lojamuseudagula.com.br/media/upload/ckeditor/2020/05/15/2020-05-15-post-mdg-virt-artesanal.jpg");
-    height: 405px;
+    height: 700px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

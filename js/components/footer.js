@@ -1,8 +1,8 @@
 export const footerComponent =
     `
-        <div class="container text-center text-md-start">
+        <div class="container text-center text-md-start w-100">
             <div class="separating-line text-dark"></div>
-            <div class="row text-center text-md-left">
+            <div class="row text-center text-md-left w-100">
                 <div class="col-md-3 col-lg-3 col-xl-3 mt-3 mx-auto">
                     <h5 class="mb-4 fw-bold">Cervejaria Caneco Cheio</h5>
 
