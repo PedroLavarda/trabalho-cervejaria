@@ -1,53 +1,62 @@
 [
   {
+    "id" : 1,
     "name": "BierBaum",
     "price": 180.99,
     "image": "assets\\images\\Cerveja Artesanal 2 - Projeto Figma.jpg",
     "description": "w"
   },
   {
+    "id" : 2,
     "name": "Moinho Real",
     "price": 110.64,
     "image": "assets\\images\\Cerveja Artesanal 3 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 3,
     "name": "Eisenbahn",
     "price": 50.50,
     "image": "assets\\images\\Cerveja Artesanal 4 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 4,
     "name": "Budweiser",
     "price": 77.00,
     "image": "assets\\images\\Cerveja Artesanal 5 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 5,
     "name": "Heineken",
     "price": 180.89,
     "image": "assets\\images\\Cerveja Artesanal 6 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 6,
     "name": "Brahma",
     "price": 80.50,
     "image": "assets\\images\\Cerveja Artesanal 7 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 7,
     "name": "Kit Cervejeiro de Cerveja Artesanal - 100L",
     "price": 3790.50,
     "image": "assets\\images\\Kit cervejaria - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 8,
     "name": "Caneco medieval - Elmo de soldado",
     "price": 72.00,
     "image": "assets\\images\\Caneco elmo medieval - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 9,
     "name": "Cervejeira Consul Titanium - CZD12AT 110V",
     "price": 2160.00,
     "image": "assets\\images\\Cervejeira consul - Projeto Figma.webp",
