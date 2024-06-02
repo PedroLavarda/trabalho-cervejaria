@@ -1,17 +1,20 @@
 [
   {
+    "id" : 1,
     "name": "Kit Premium Garrafas Bierbaum",
     "price": 180.99,
     "image": "assets\\images\\Cerveja Artesanal 2 - Projeto Figma.jpg",
     "description": "w"
   },
   {
+    "id" : 2,
     "name": "Cerveja Moinho Real Puro Malte - 24 Unidades - Garrafa 330ml",
     "price": 110.64,
     "image": "assets\\images\\Cerveja Artesanal 3 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 3,
     "name": "Cerveja Eisenbahn Puro Malte Pilsen - 12 Unidades - Lata 350ml",
     "price": 50.50,
     "image": "assets\\images\\Cerveja Artesanal 4 - Projeto Figma.webp",
@@ -19,18 +22,21 @@
 
   },
   {
+    "id" : 4,
     "name": "Cerveja Budweiser Pilsen - 6 Unidades - Garrafa 330ML",
     "price": 77.00,
     "image": "assets\\images\\Cerveja Artesanal 5 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 5,
     "name": "Cerveja Heineken Puro Malte - 4x6 Unidades - Garrafa 600 ml",
     "price": 180.89,
     "image": "assets\\images\\Cerveja Artesanal 6 - Projeto Figma.webp",
     "description": "w"
   },
   {
+    "id" : 6,
     "name": "Cerveja Brahma Chopp Lager Pilsen - 12 Unidades - Lata 350ml",
     "price": 80.50,
     "image": "assets\\images\\Cerveja Artesanal 7 - Projeto Figma.webp",
