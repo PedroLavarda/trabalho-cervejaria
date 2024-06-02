@@ -17,7 +17,7 @@ export const navbarComponent =
                     <span class="input-group-text bg-white">
                         <i class="bi bi-search"></i>
                     </span>
-                    <input class="form-control border rounded" type="search" placeholder="Pesquisar" id="pesquisar">
+                    <input class="form-control border rounded me-2" type="search" placeholder="Pesquisar" id="pesquisar">
                 </div>
             </form>
 
