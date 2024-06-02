@@ -45,8 +45,25 @@ fetch("/products.json")
                 button.style.backgroundColor = "black";
                 button.style.color = "white";
                 button.style.alignSelf = "center";
+                button.setAttribute('data-index', j);
                 button.addEventListener('click', () => {
-                    window.location.href = 'paginaProduto.html';
+                    const index = button.getAttribute('data-index');
+
+                    fetch('products.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Armazena os dados no localStorage
+                        localStorage.setItem('productData', JSON.stringify({
+                            id: data[index]["id"],
+                            name: data[index]["name"],
+                            price: data[index]["price"],
+                            image: data[index]["image"],
+                            description: data[index]["description"],
+                        }));
+                        
+                        window.location.href = 'paginaProduto.html';
+                    })
+                    .catch(error => console.error('Erro ao carregar o JSON:', error));
                 });
 
                 prodCol.appendChild(img);
@@ -111,8 +128,25 @@ fetch("/products.json")
                 button.style.backgroundColor = "black";
                 button.style.color = "white";
                 button.style.alignSelf = "center";
+                button.setAttribute('data-index', j);
                 button.addEventListener('click', () => {
-                    window.location.href = 'paginaProduto.html';
+                    const index = button.getAttribute('data-index');
+
+                    fetch('products.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Armazena os dados no localStorage
+                        localStorage.setItem('productData', JSON.stringify({
+                            id: data[index]["id"],
+                            name: data[index]["name"],
+                            price: data[index]["price"],
+                            image: data[index]["image"],
+                            description: data[index]["description"],
+                        }));
+                        
+                        window.location.href = 'paginaProduto.html';
+                    })
+                    .catch(error => console.error('Erro ao carregar o JSON:', error));
                 });
 
                 prodCol.appendChild(img);
@@ -176,8 +210,25 @@ fetch("/products.json")
             button.style.backgroundColor = "black";
             button.style.color = "white";
             button.style.alignSelf = "center";
+            button.setAttribute('data-index', j);
             button.addEventListener('click', () => {
-                window.location.href = 'paginaProduto.html';
+                const index = button.getAttribute('data-index');
+
+                fetch('products.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Armazena os dados no localStorage
+                    localStorage.setItem('productData', JSON.stringify({
+                        id: data[index]["id"],
+                        name: data[index]["name"],
+                        price: data[index]["price"],
+                        image: data[index]["image"],
+                        description: data[index]["description"],
+                    }));
+                    
+                    window.location.href = 'paginaProduto.html';
+                })
+                .catch(error => console.error('Erro ao carregar o JSON:', error));
             });
 
             prodCol.appendChild(img);
@@ -239,12 +290,22 @@ fetch("/products.json")
             button.style.backgroundColor = "black";
             button.style.color = "white";
             button.style.alignSelf = "center";
+            button.setAttribute('data-index', j);
             button.addEventListener('click', () => {
+                const index = button.getAttribute('data-index');
+
                 fetch('products.json')
                 .then(response => response.json())
                 .then(data => {
                     // Armazena os dados no localStorage
-                    localStorage.setItem('productData', JSON.stringify(data));
+                    localStorage.setItem('productData', JSON.stringify({
+                        id: data[index]["id"],
+                        name: data[index]["name"],
+                        price: data[index]["price"],
+                        image: data[index]["image"],
+                        description: data[index]["description"],
+                    }));
+                    
                     window.location.href = 'paginaProduto.html';
                 })
                 .catch(error => console.error('Erro ao carregar o JSON:', error));
