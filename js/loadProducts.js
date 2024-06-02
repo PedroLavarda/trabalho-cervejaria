@@ -27,13 +27,11 @@ fetch("/products.json")
 
                 const name = document.createElement("h5");
                 name.innerHTML = data[j]["name"];
-
-                const description = document.createElement("p");
-                description.classList.add("text-secondary");
-                description.innerHTML = data[j]["description"];
+                name.style.marginTop = "10px";
 
                 const price = document.createElement("p");
                 price.innerHTML = "R$ "+data[j]["price"];
+                price.style.marginTop = "10px";
 
                 const button = document.createElement("button");
                 button.textContent = "Ver produto";
@@ -68,7 +66,6 @@ fetch("/products.json")
 
                 prodCol.appendChild(img);
                 prodCol.appendChild(name);
-                prodCol.appendChild(description);
                 prodCol.appendChild(price);
                 prodCol.appendChild(button);
 
@@ -111,12 +108,11 @@ fetch("/products.json")
 
                 const name = document.createElement("h5");
                 name.innerHTML = data[j]["name"];
-
-                const description = document.createElement("p");
-                description.innerHTML = data[j]["description"];
+                name.style.marginTop = "10px";
 
                 const price = document.createElement("p");
                 price.innerHTML = "R$ "+data[j]["price"];
+                price.style.marginTop = "10px";
 
                 const button = document.createElement("button");
                 button.textContent = "Ver produto";
@@ -151,7 +147,6 @@ fetch("/products.json")
 
                 prodCol.appendChild(img);
                 prodCol.appendChild(name);
-                prodCol.appendChild(description);
                 prodCol.appendChild(price);
                 prodCol.appendChild(button);
 
@@ -194,11 +189,11 @@ fetch("/products.json")
 
             const name = document.createElement("h5");
             name.innerHTML = data[j]["name"];
-            const description = document.createElement("p");
-            description.classList.add("text-secondary");
-            description.innerHTML = data[j]["description"];
+            name.style.marginTop = "10px";
+
             const price = document.createElement("p");
             price.innerHTML = "R$ "+data[j]["price"];
+            price.style.marginTop = "10px";
 
             const button = document.createElement("button");
             button.textContent = "Ver produto";
@@ -233,7 +228,6 @@ fetch("/products.json")
 
             prodCol.appendChild(img);
             prodCol.appendChild(name);
-            prodCol.appendChild(description);
             prodCol.appendChild(price);
             prodCol.appendChild(button);
 
@@ -256,6 +250,8 @@ fetch("/products.json")
         prodRow.classList.add("row");
         prodRow.classList.add("gap-5");
         prodRow.classList.add("mb-5");
+        prodRow.style.marginLeft = "2rem";
+        prodRow.style.marginRight = "2rem";
 
         let count = 0;
         let j = 2;
@@ -274,11 +270,11 @@ fetch("/products.json")
 
             const name = document.createElement("h5");
             name.innerHTML = data[j]["name"];
-            const description = document.createElement("p");
-            description.classList.add("text-secondary");
-            description.innerHTML = data[j]["description"];
+            name.style.marginTop = "10px";
+
             const price = document.createElement("p");
             price.innerHTML = "R$ "+data[j]["price"];
+            price.style.marginTop = "10px";
 
             const button = document.createElement("button");
             button.textContent = "Ver produto";
@@ -313,7 +309,6 @@ fetch("/products.json")
 
             prodCol.appendChild(img);
             prodCol.appendChild(name);
-            prodCol.appendChild(description);
             prodCol.appendChild(price);
             prodCol.appendChild(button);
 
