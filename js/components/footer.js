@@ -23,11 +23,11 @@ export const footerComponent =
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 d-flex flex-column text-md-start">
                     <a class="h7 text-decoration-none text-dark" href="index.html"> Home </a>
                     <br/>
-                    <a class="h7 text-decoration-none text-dark" href="sobre.html"> Quem somos </a>
+                    <a class="h7 text-decoration-none text-dark" href="about.html"> Quem somos </a>
                     <br/>
                     <a class="h7 text-decoration-none text-dark" href=""> Perfil </a>
                     <br/>
-                    <a class="h7 text-decoration-none text-dark" href="carrinho.html"> Carrinho </a>
+                    <a class="h7 text-decoration-none text-dark" href="cart.html"> Carrinho </a>
                 </div>
             </div>
         </div>

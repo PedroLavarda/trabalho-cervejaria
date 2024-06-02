@@ -1,4 +1,5 @@
 const title = document.getElementById("title");
+const cart = [];
 
 document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMContentLoaded'
     // Recupera os dados do localStorage
@@ -53,8 +54,26 @@ document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMCont
             button.style.backgroundColor = "black";
             button.style.color = "white";
             button.style.alignSelf = "center";
-            button.addEventListener('click', () => {
-                window.location.href = 'carrinho.html';
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                if(localStorage.getItem("users") != null) {
+                    if  (localStorage.getItem("cartData") === null) {
+                        cart.push(data);
+                        localStorage.setItem("cartData", JSON.stringify(cart));
+                    } else {
+                        let cartData = JSON.parse(localStorage.getItem("cartData"));
+                        cartData.forEach((item) => {
+                            cart.push(item)
+                        })
+                        cart.push(data);
+                        localStorage.setItem("cartData", JSON.stringify(cart));
+                    }
+                    window.location.href = 'cart.html';
+                } else{
+                    window.alert('Usuário deve estar logado');
+                    window.location.href = 'login.html'
+                }
+
             });
 
         const buttonComprar = document.createElement("button");
@@ -68,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMCont
         buttonComprar.style.color = "white";
         buttonComprar.style.alignSelf = "center";
         buttonComprar.addEventListener('click', () => {
-            window.location.href = 'carrinho.html';
+            window.location.href = 'cart.html';
         });
 
         // Adiciona os elementos ao div produto

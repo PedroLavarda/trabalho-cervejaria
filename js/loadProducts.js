@@ -17,6 +17,9 @@ fetch("/products.json")
                 const prodCol = document.createElement("div");
                 prodCol.classList.add("card");
                 prodCol.classList.add("col");
+                prodCol.classList.add("product");
+                prodCol.id = data[j]["id"];
+
 
                 const img = document.createElement("img");
                 img.src = data[j]["image"];
@@ -59,7 +62,7 @@ fetch("/products.json")
                             description: data[index]["description"],
                         }));
                         
-                        window.location.href = 'paginaProduto.html';
+                        window.location.href = 'procutPage.html';
                     })
                     .catch(error => console.error('Erro ao carregar o JSON:', error));
                 });
@@ -140,7 +143,7 @@ fetch("/products.json")
                             description: data[index]["description"],
                         }));
                         
-                        window.location.href = 'paginaProduto.html';
+                        window.location.href = 'procutPage.html';
                     })
                     .catch(error => console.error('Erro ao carregar o JSON:', error));
                 });
@@ -221,7 +224,7 @@ fetch("/products.json")
                         description: data[index]["description"],
                     }));
                     
-                    window.location.href = 'paginaProduto.html';
+                    window.location.href = 'procutPage.html';
                 })
                 .catch(error => console.error('Erro ao carregar o JSON:', error));
             });
@@ -239,6 +242,21 @@ fetch("/products.json")
 
         count = 0;
     })
+
+let i, products = document.getElementsByClassName('product'); // get all products
+
+for (i = 0; i < products.length; i++) {
+    products[i].onclick = function() {
+        showInfo(this.id)
+    }; // add onclick Event to all products
+}
+
+function showInfo(id) {
+    let x, infos = document.getElementsByClassName('info'); // get all infos
+    for (x = 0; x < infos.length; x++) {
+        (infos[x].id === 'info-' + id) ? infos[x].className = 'info': infos[x].className = 'info hidden'; // Show info for clicked product only
+    }
+}
 
 //Produtos relacionados
 fetch("/products.json")
@@ -302,7 +320,7 @@ fetch("/products.json")
                         description: data[index]["description"],
                     }));
                     
-                    window.location.href = 'paginaProduto.html';
+                    window.location.href = 'procutPage.html';
                 })
                 .catch(error => console.error('Erro ao carregar o JSON:', error));
             });

@@ -46,3 +46,8 @@ html, body {
 .banner-text p {
     font-size: larger;
 }
+
+.cart-img {
+    height: 11rem;
+    width: 13rem;
+}
