@@ -51,3 +51,13 @@ html, body {
     height: 11rem;
     width: 13rem;
 }
+
+.payment-receipt {
+    display: flex;
+    width: 100vw;
+}
+
+.payment-infos {
+    display: flex;
+    width: 100vw;
+}
