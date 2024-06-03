@@ -37,7 +37,7 @@ if (cartData != null) {
     const totalPrice = document.createElement("div");
     totalPrice.classList.add("mt-4");
     const price = document.createElement("h5");
-    price.innerHTML = "Preço total: " + totalInCart;
+    price.innerHTML = "Preço total: R$ " + totalInCart;
     price.classList.add("h5");
 
     totalPrice.appendChild(price);
@@ -72,4 +72,6 @@ proceedWithPayment.addEventListener("click", (e) => {
            })
        }
    }
+
+   window.location.href = 'payment.html';
 });
