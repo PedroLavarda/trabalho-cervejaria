@@ -6,18 +6,18 @@ fetch("/products.json")
         const topProducts = document.getElementById("mostSold");
 
         const prodRow = document.createElement("div");
-        prodRow.classList.add("row gap-5 mb-5");
+        prodRow.classList.add("row", "gap-5", "mb-5");
 
         let count = 0;
         let j = 8;
 
         while(count < 3) {
             const prodCol = document.createElement("div");
-            prodCol.classList.add("card col");
+            prodCol.classList.add("card", "col");
 
             const img = document.createElement("img");
             img.src = data[j]["image"];
-            img.classList.add("img-fluid h-75 w-50 align-self-center");
+            img.classList.add("img-fluid", "h-75", "w-50", "align-self-center");
 
             const name = document.createElement("h5");
             name.innerHTML = data[j]["name"];

@@ -10,17 +10,17 @@ fetch("/products.json")
 
         for(let i = 0; i < 2; i++) {
             const prodRow = document.createElement("div");
-            prodRow.classList.add("row gap-5 mb-5");
+            prodRow.classList.add("row", "gap-5", "mb-5");
 
             while(count < 3) {
                 const prodCol = document.createElement("div");
-                prodCol.classList.add("card col product");
+                prodCol.classList.add("card", "col", "product");
                 prodCol.id = data[j]["id"];
 
 
                 const img = document.createElement("img");
                 img.src = data[j]["image"];
-                img.classList.add("img-fluid h-57 w-50 align-self-center");
+                img.classList.add("img-fluid", "h-57", "w-50", "align-self-center");
 
                 const name = document.createElement("h5");
                 name.innerHTML = data[j]["name"];

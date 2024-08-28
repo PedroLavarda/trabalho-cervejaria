@@ -57,23 +57,38 @@ document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMCont
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 if(localStorage.getItem("users") != null) {
-                    if  (localStorage.getItem("cartData") === null) {
-                        cart.push(data);
-                        localStorage.setItem("cartData", JSON.stringify(cart));
-                    } else {
-                        let cartData = JSON.parse(localStorage.getItem("cartData"));
+                    let cartData = JSON.parse(localStorage.getItem("cartData"));
+                    let currP = null;
+                    
+                    if(cartData != null) {
                         cartData.forEach((item) => {
-                            cart.push(item)
-                        })
-                        cart.push(data);
-                        localStorage.setItem("cartData", JSON.stringify(cart));
+                            cart.push(item);
+    
+                            if(item.id === data.id) {
+                                currP = item;
+                                item.quantity += 1;
+                            }
+                        });
                     }
+
+                    if(cartData === null || cartData.length === 0 || !currP) {
+                        cart.push({
+                            id: data.id,
+                            name: data["name"],
+                            price: data["price"],
+                            image: data["image"],
+                            description: ["description"],
+                            quantity: 1
+                        });
+                    } 
+
+                    localStorage.setItem("cartData", JSON.stringify(cart));
+
                     window.location.href = 'cart.html';
                 } else{
                     window.alert('Usuário deve estar logado');
                     window.location.href = 'login.html'
                 }
-
             });
 
         const buttonComprar = document.createElement("button");

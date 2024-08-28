@@ -6,7 +6,7 @@ fetch("/products.json")
         const relatedProducts = document.getElementById("relatedProducts");
 
         const prodRow = document.createElement("div");
-        prodRow.classList.add("row gap-5 mb-5");
+        prodRow.classList.add("row", "gap-5", "mb-5");
         prodRow.style.marginLeft = "2rem";
         prodRow.style.marginRight = "2rem";
 
@@ -15,11 +15,11 @@ fetch("/products.json")
 
         while(count < 3) {
             const prodCol = document.createElement("div");
-            prodCol.classList.add("card col");
+            prodCol.classList.add("card", "col", "product");
 
             const img = document.createElement("img");
             img.src = data[j]["image"];
-            img.classList.add("img-fluid h-75 w-50 align-self-center");
+            img.classList.add("img-fluid", "h-75", "w-50", "align-self-center");
 
             const name = document.createElement("h5");
             name.innerHTML = data[j]["name"];
@@ -43,7 +43,7 @@ fetch("/products.json")
             button.addEventListener('click', () => {
                 const index = button.getAttribute('data-index');
 
-                fetch('products.json')
+                fetch('/products.json')
                 .then(response => response.json())
                 .then(data => {
                     // Armazena os dados no localStorage
