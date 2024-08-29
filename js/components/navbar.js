@@ -7,7 +7,7 @@ export const navbarComponent =
             <div class="d-flex flex-row mt-3">
                 <button class="btn fw-bold"><a class="text-dark text-decoration-none" href="index.html"> Home </a></button>
                 <button class="btn fw-bold"><a class="text-dark text-decoration-none" href="about.html"> Quem somos </a></button>
-                <button class="btn fw-bold"> Perfil </button>
+                <button id="navbarProfileBtn" class="btn fw-bold"> Perfil </button>
             </div>
         </div>
 
@@ -22,5 +22,6 @@ export const navbarComponent =
             </form>
 
             <button id="navbarCartBtn" class="ms-2 btn btn-dark text-white w-50"> Carrinho </button>
+            <button id="navbarLogout" class="ms-2 btn btn-danger text-white"><i class="bi bi-box-arrow-left h5"></i></button>
         </div>
     `
