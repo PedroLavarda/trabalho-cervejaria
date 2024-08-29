@@ -6,6 +6,9 @@ if (cartData != null) {
     const pagamentoDiv = document.createElement("div");
     pagamentoDiv.classList.add("border");
     pagamentoDiv.style.padding = "10px";
+    pagamentoDiv.style.paddingTop = "30px";
+    pagamentoDiv.style.paddingBottom = "30px";
+    pagamentoDiv.style.paddingRight = "30px";
 
     cartData.forEach(product => {
         const itensDiv = document.createElement("div");
