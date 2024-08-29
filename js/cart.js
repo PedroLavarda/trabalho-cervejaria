@@ -98,19 +98,17 @@ const proceedWithPayment = document.getElementById("btnFinalizarCompra");
 
 proceedWithPayment.addEventListener("click", (e) => {
    e.preventDefault();
+   const user = JSON.parse(localStorage.getItem("activeUser"));
+   const cart = JSON.parse(localStorage.getItem('cartData'));
 
-   if(localStorage.getItem("users") != null) {
-       const toastTrigger = document.getElementById('btnFinalizarCompra');
-       const toastLiveExample = document.getElementById('liveToast');
-       if (toastTrigger) {
-           toastTrigger.addEventListener('click', () => {
-               const toast = new bootstrap.Toast(toastLiveExample)
-               toast.show()
-           })
-       }
+   if (cart === null || cart.length === 0) {
+    window.alert('O carrinho está vazio !');
+   } else if(user === null) {
+       window.alert("Usuario deve estar logado para realizar uma compra.");
+       window.location.href = 'login.html';
+   } else {
+        window.location.href = 'payment.html';
    }
-
-   window.location.href = 'payment.html';
 });
 
 const deleteFromCart = async (e) => {
@@ -118,11 +116,11 @@ const deleteFromCart = async (e) => {
     const cart = JSON.parse(localStorage.getItem('cartData'));
     const arr = JSON.parse(localStorage.getItem("products"));
     const selected = arr.find(p => p.id === Number(id));
-
+  
     if (selected) {
-        cart.pop(selected);
-        localStorage.setItem("cartData", JSON.stringify(cart));
-        alert('Produto removido');
-        window.location.reload();
+      const newCart = cart.filter(item => item.id !== selected.id);
+      localStorage.setItem("cartData", JSON.stringify(newCart));
+      alert('Produto removido');
+      window.location.reload();
     }
 }

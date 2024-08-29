@@ -1,25 +1,22 @@
-const title = document.getElementById("title");
 const cart = [];
 
-document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMContentLoaded'
-    // Recupera os dados do localStorage
-    const produtoData = localStorage.getItem('productData'); // Use 'productData' aqui
+document.addEventListener('DOMContentLoaded', () => { 
+    const produtoData = localStorage.getItem('productData');
 
     if (produtoData) {
+
         const data = JSON.parse(produtoData);
+
+        document.title = 'Produto - ' + data.name;
 
         const produtoElement = document.getElementById('produto');
 
         const produtoDiv = document.createElement("div");
         produtoDiv.style.display = "flex";
         
-        // Cria elementos para exibir os dados do produto
         const imagem = document.createElement('img');
         imagem.src = data.image;
-        imagem.classList.add("img-fluid");
-        imagem.classList.add("h-150%");
-        imagem.classList.add("w-150%");
-        imagem.classList.add("align-self-center");
+        imagem.classList.add("img-fluid", "align-self-center");
         imagem.style.marginLeft = "5rem";
         imagem.style.marginRight = "5rem";
 
@@ -56,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMCont
             button.style.alignSelf = "center";
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                if(localStorage.getItem("users") != null) {
+                if(localStorage.getItem("activeUser") != null) {
                     let cartData = JSON.parse(localStorage.getItem("cartData"));
                     let currP = null;
                     
@@ -86,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMCont
 
                     window.location.href = 'cart.html';
                 } else{
-                    window.alert('Usuário deve estar logado');
+                    window.alert('Usuário deve estar logado para adicionar um item ao carrinho.');
                     window.location.href = 'login.html'
                 }
             });
@@ -102,10 +99,15 @@ document.addEventListener('DOMContentLoaded', () => { // Corrigido para 'DOMCont
         buttonComprar.style.color = "white";
         buttonComprar.style.alignSelf = "center";
         buttonComprar.addEventListener('click', () => {
-            window.location.href = 'cart.html';
+            const user = JSON.parse(localStorage.getItem('activeUser'));
+            
+            if (user != null) {
+                window.location.href = 'cart.html';
+            } else {
+                window.alert('Usuario deve estar logado para comprar um item.');
+            }
         });
 
-        // Adiciona os elementos ao div produto
         produtoDiv.appendChild(imagem);
         textoDiv.appendChild(nome);
         textoDiv.appendChild(preco);

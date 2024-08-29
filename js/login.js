@@ -11,6 +11,7 @@ loginButton.addEventListener("click", (e) => {
 
   for (let i = 0; i < users.length; i++) {
     if (email === users.at(i).email && password === users.at(i).password) {
+      localStorage.setItem("activeUser", JSON.stringify(users.at(i)));
       window.location.href = "index.html";
     } else {
       window.alert("Conta não existente");

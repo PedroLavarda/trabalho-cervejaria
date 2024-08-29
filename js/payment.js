@@ -6,6 +6,9 @@ if (cartData != null) {
     const pagamentoDiv = document.createElement("div");
     pagamentoDiv.classList.add("border");
     pagamentoDiv.style.padding = "10px";
+    pagamentoDiv.style.paddingTop = "30px";
+    pagamentoDiv.style.paddingBottom = "30px";
+    pagamentoDiv.style.paddingRight = "30px";
 
     cartData.forEach(product => {
         const itensDiv = document.createElement("div");
@@ -16,12 +19,12 @@ if (cartData != null) {
         itensDiv.style.marginBottom = "5px";
 
         const itemNamePrice = document.createElement("h5");
-        itemNamePrice.innerHTML = "• "+product.name+" - R$"+product.price;
+        itemNamePrice.innerHTML = "• "+product.name+" - R$"+product.price+" - Qtd: "+product.quantity;
 
         itensDiv.appendChild(itemNamePrice);
         pagamentoDiv.appendChild(itensDiv);
 
-        totalInCart += product.price;
+        totalInCart += product.price * product.quantity;
     });
 
     const totalPrice = document.createElement("div");

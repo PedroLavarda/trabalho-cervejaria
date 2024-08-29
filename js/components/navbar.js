@@ -21,6 +21,6 @@ export const navbarComponent =
                 </div>
             </form>
 
-            <button class="ms-2 btn btn-dark text-white w-50"><a class="text-white text-decoration-none" href="cart.html"> Carrinho </a></button>
+            <button id="navbarCartBtn" class="ms-2 btn btn-dark text-white w-50"> Carrinho </button>
         </div>
     `
