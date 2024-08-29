@@ -14,7 +14,7 @@ fetch("/products.json")
 
             while(count < 3) {
                 const prodCol = document.createElement("div");
-                prodCol.classList.add("card", "col", "product");
+                prodCol.classList.add("card", "col", "product", "border", "border-1", "border-dark");
                 prodCol.id = data[j]["id"];
 
 
