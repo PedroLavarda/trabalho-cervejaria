@@ -19,18 +19,26 @@ if (cartData != null) {
         addQty.addEventListener("change", (e) => {
             e.preventDefault();
             product.quantity = addQty.value;
-
             localStorage.setItem("cartData", JSON.stringify(cartData));
         });
 
-        const delP = document.createElement("button");
-        delP.classList.add("me-5");
+        const delP = document.createElement("i");
+        delP.classList.add("me-5", "bi", "bi-trash-fill", "h5");
         delP.setAttribute("data-id", product.id);
-        delP.textContent = "Deletar";
         delP.addEventListener("click", (e) => {
             e.preventDefault();
             deleteFromCart(e);
         });
+
+        delP.addEventListener("mouseover", (e) => {
+            e.preventDefault();
+            delP.classList.add("hover");
+        })
+
+        delP.addEventListener("mouseleave", (e)=> {
+            e.preventDefault();
+            delP.classList.remove("hover");
+        })
 
         opt.appendChild(delP);
         opt.appendChild(addQty);
