@@ -13,12 +13,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const produtoDiv = document.createElement("div");
         produtoDiv.style.display = "flex";
+
+        const imgDiv = document.createElement("div");
+        imgDiv.classList.add("d-flex", "flex-column");
         
         const imagem = document.createElement('img');
         imagem.src = data.image;
-        imagem.classList.add("img-fluid", "align-self-center");
+        imagem.classList.add("img-fluid", "align-self-center", "ps-5", "ms-5");
         imagem.style.marginLeft = "5rem";
         imagem.style.marginRight = "5rem";
+
+        const smallImgRow = document.createElement("div");
+        smallImgRow.classList.add("d-flex", "flex-row", "w-50");
+
+        const img1 = document.createElement('img');
+        img1.src = data.image;
+        img1.classList.add("img-fluid", "align-self-center", "border", "border-dark", "pe-2");
+
+
+        const img2 = document.createElement('img');
+        img2.src = data.image;
+        img2.classList.add("img-fluid", "align-self-center",  "border", "border-dark" ,"pe-2");
+
+
+        const img3 = document.createElement('img');
+        img3.src = data.image;
+        img3.classList.add("img-fluid", "align-self-center",  "border", "border-dark", "pe-2");
+
+
+        smallImgRow.appendChild(img1);
+        smallImgRow.appendChild(img2);
+        smallImgRow.appendChild(img3);
+        imgDiv.appendChild(imagem);
+        imgDiv.appendChild(smallImgRow)
 
         const textoDiv = document.createElement("div");
         textoDiv.style.marginRight = "5rem";
@@ -108,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        produtoDiv.appendChild(imagem);
+        produtoDiv.appendChild(imgDiv);
         textoDiv.appendChild(nome);
         textoDiv.appendChild(preco);
         textoDiv.appendChild(descricao);
