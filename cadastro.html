@@ -14,18 +14,30 @@
         <div class="w-25 h-75 rounded bg-white border">
             <div class="w-100 h-100 p-3 d-flex flex-column align-items-center">
                 <div class="h-25 mt-5 text-center">
-                    <h1 class="mt-5 fw-bold fs-1"> Cadastro </h1>
+                    <h1 class="fw-bold fs-1 mb-3"> Cadastro </h1>
                 </div>
 
-                <div>
+                <div class="pb-5">
                     <form id="cadastroForm">
                         <div class="mb-3">
-                            <label for="inputEmail" class="form-label"> Informe seu email: </label>
+                            <label for="inputEmail" class="form-label"> Informe seu email: *</label>
                             <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="user@email.com" required>
                             <div id="emailHelp" class="form-text"> Seu email não será compartilhado com terceiros. </div>
                         </div>
                         <div class="mb-3">
-                            <label for="inputPassword" class="form-label"> Informe sua senha: </label>
+                            <label for="inputName" class="form-label"> Informe seu nome: *</label>
+                            <input type="text" class="form-control" id="inputName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputCpf" class="form-label"> Informe seu cpf: *</label>
+                            <input type="text" class="form-control" id="inputCpf" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputBirthdate" class="form-label"> Informe sua data de nascimento: </label>
+                            <input type="date" class="form-control" id="inputBirthdate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label"> Informe sua senha: *</label>
                             <input type="password" class="form-control" id="inputPassword" required>
                         </div>
                         <button type="submit" id="cadastroFormSubmit" class="btn btn-primary w-100"> Cadastrar </button>

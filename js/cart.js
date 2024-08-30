@@ -76,7 +76,7 @@ if (cartData != null) {
     const price = document.createElement("h5");
     price.innerHTML = "Preço total: R$ " + totalInCart;
     price.classList.add("h5");
-
+    
     totalPrice.appendChild(price);
     cart.appendChild(totalPrice);
 } else {
