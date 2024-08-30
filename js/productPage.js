@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         produtoDiv.style.display = "flex";
 
         const imgDiv = document.createElement("div");
-        imgDiv.classList.add("d-flex", "flex-column");
+        imgDiv.classList.add("d-flex", "flex-column", "w-75");
         
         const imagem = document.createElement('img');
         imagem.src = data.image;
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         imagem.style.marginRight = "5rem";
 
         const smallImgRow = document.createElement("div");
-        smallImgRow.classList.add("d-flex", "flex-row", "w-50");
+        smallImgRow.classList.add("d-flex", "flex-row", "w-50", "align-items-center", "ps-5");
 
         const img1 = document.createElement('img');
         img1.src = data.image;

@@ -17,6 +17,10 @@ html, body {
     width: 3vw;
 }
 
+.w-30 {
+    width: 6vw;
+}
+
 .body-login {
     background-color: rgb(226, 224, 224);
 }
