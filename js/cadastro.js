@@ -19,7 +19,7 @@ cadastroButton.addEventListener("click", (e) => {
     const alreadyExists = users.find(e => e.email === user.email || e.cpf === user.cpf);
 
     if (alreadyExists) {
-        window.alert('Email já esta em uso.');
+        window.alert('Email/Cpf já esta em uso.');
     } else {
         users.push(user);
 
