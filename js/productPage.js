@@ -55,9 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
         nome.classList.add("h2");
 
         const preco = document.createElement('p');
-        preco.innerHTML = "R$ "+data.price;
+        preco.innerHTML = "R$ "+data.price + " à vista";
         preco.classList.add("h4");
         preco.style.marginTop = "2rem";
+
+        const parcela = document.createElement('span');
+        parcela.textContent = "ou 4x de R$ "+data.price/4+"*";
+        parcela.classList.add("text-muted", "h6")
         
         const descricao = document.createElement('p');
         descricao.innerHTML = data.description;
@@ -138,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         produtoDiv.appendChild(imgDiv);
         textoDiv.appendChild(nome);
         textoDiv.appendChild(preco);
+        textoDiv.appendChild(parcela);
         textoDiv.appendChild(descricao);
         botoesDiv.appendChild(button);
         botoesDiv.appendChild(buttonComprar);
