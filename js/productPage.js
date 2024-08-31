@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = JSON.parse(produtoData);
 
+        const maxWidth = 350;
+        const maxHeight = 350;
+
         document.title = 'Produto - ' + data.name;
 
         const produtoElement = document.getElementById('produto');
@@ -22,6 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
         imagem.classList.add("img-fluid", "align-self-center", "ps-5", "ms-5");
         imagem.style.marginLeft = "5rem";
         imagem.style.marginRight = "5rem";
+
+        imagem.onload = function() {
+            if (imagem.width > maxWidth) {
+                imagem.style.width = maxWidth + 'px';
+            }
+            if (imagem.height > maxHeight) {
+                imagem.style.height = maxHeight + 'px';
+            }
+        };
 
         const smallImgRow = document.createElement("div");
         smallImgRow.classList.add("d-flex", "flex-row", "w-50", "align-items-center", "ps-5");
@@ -150,6 +162,21 @@ document.addEventListener('DOMContentLoaded', () => {
         produtoDiv.appendChild(textoDiv);
 
         produtoElement.appendChild(produtoDiv);
+
+        /*const maxWidthDiv = 450;
+        const maxHeightDiv = 450;
+        const widthLimit = 600;
+
+        const rect = imgDiv.getBoundingClientRect();
+
+        if(rect.width > widthLimit) {
+            imgDiv.classList.remove("w-75");
+            imgDiv.style.width = "5rem";
+        }
+
+        if (rect.height > maxHeightDiv) {
+            imgDiv.style.height = maxHeightDiv + 'px';
+        }*/
     } else {
         console.error('Nenhum dado encontrado no localStorage');
     }
