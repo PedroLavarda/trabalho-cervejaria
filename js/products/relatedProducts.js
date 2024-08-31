@@ -15,7 +15,7 @@ fetch("/products.json")
 
         while(count < 3) {
             const prodCol = document.createElement("div");
-            prodCol.classList.add("card", "col", "product", "border", "border-1", "border-dark");
+            prodCol.classList.add("card", "col", "product");
 
             const img = document.createElement("img");
             img.src = data[j]["image"];
