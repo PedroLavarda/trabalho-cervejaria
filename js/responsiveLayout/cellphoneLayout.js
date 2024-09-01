@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
             cartBtn.classList.add("btn-responsive");
             logoutBtn.classList.add("btn-responsive");
             titulo.style.marginTop = "20px";
-
-            main.classList.remove("mt-5");
         } else {
             logo.classList.add("ms-5", "mt-2");
             logo.style.width = "";
