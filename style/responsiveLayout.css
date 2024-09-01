@@ -1,7 +1,10 @@
 @media screen and (min-width:410px) and (max-width:1024px) {
+    html, body {
+        overflow-x: hidden;  
+    }
+    
     .navbar {
         display: flex;
-        
         align-items: center;
     }
 
@@ -12,7 +15,6 @@
     }
 
     .navbar .d-flex {
-        
         align-items: center;
         width: 100%;
     }
@@ -24,8 +26,23 @@
         justify-content: center;
     }
 
+    .navbar #divPesquisar {
+        margin-left: 2rem;
+    }
+
+    /*.navbar #navbarCartBtn {
+        margin-left: 2rem;
+    }*/
+
+    .navbar #icon-cart {
+        height: 1rem;
+    }
+
+    .navbar #icon-logout {
+        height: 1rem;
+    }
+
     .input-group {
-        width: 0px;
         margin-top: 5px;
         display: flex;
         justify-content: center;
@@ -67,27 +84,3 @@
         font-size: smaller;
     }
 }
-
-/*@media screen and (min-width:1024px) and (max-width:1366px) {
-    #logo-cervejaria {
-        width: 15%;
-        height: 15%;
-    }
-
-    #titulo-cervejaria {
-        font-weight: bolder;
-        font-size: medium;
-    }
-}
-
-@media screen and (min-width:1366px) {
-    #logo-cervejaria {
-        width: 15%;
-        height: 15%;
-    }
-
-    #titulo-cervejaria {
-        font-weight: bolder;
-        font-size: large;
-    }
-}*/

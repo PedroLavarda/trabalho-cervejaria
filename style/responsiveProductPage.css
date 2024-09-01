@@ -1,0 +1,17 @@
+@media screen and (min-width:410px) and (max-width:1024px) {
+    #produto h1 {
+        font-size: small;
+    }
+
+    #textoDiv p {
+        font-size: small;
+    }
+
+    #textoDiv span {
+        font-size: smaller;
+    }
+
+    #main {
+        margin-top: 1rem;
+    }
+}
