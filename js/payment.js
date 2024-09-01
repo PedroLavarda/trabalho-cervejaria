@@ -30,11 +30,27 @@ if (cartData != null) {
     const totalPrice = document.createElement("div");
     totalPrice.classList.add("mt-4");
 
+    const subprice = document.createElement("h6");
+    subprice.innerHTML = "Subtotal: R$ " + totalInCart;
+    subprice.style.marginLeft = "2rem";
+
+    const discount = document.createElement("h6");
+    discount.textContent = "Desconto total: 0";
+    discount.style.marginLeft = "2rem";
+
+    const frete = document.createElement("h6");
+    frete.textContent = "Frete: 10.0";
+    frete.style.marginLeft = "2rem";
+
     const price = document.createElement("h5");
-    price.innerHTML = "Preço total: R$ " + totalInCart;
+    price.innerHTML = "Preço total: R$ " + (totalInCart + 10);
     price.classList.add("h5");
     price.style.marginLeft = "2rem";
 
+
+    totalPrice.appendChild(subprice);
+    totalPrice.appendChild(discount);
+    totalPrice.appendChild(frete);
     totalPrice.appendChild(price);
     pagamentoDiv.appendChild(totalPrice);
     payment.appendChild(pagamentoDiv);
