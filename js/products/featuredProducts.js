@@ -71,15 +71,6 @@ fetch("/products.json")
                     j++;
                     count++;
                     featured.appendChild(prodRow);
-
-                    /*if (window.innerWidth >= 410 && window.innerWidth <= 1024) {
-                        img.classList.remove("h-57", "w-50");
-                        button.textContent = "";
-                        button.classList.add("bi-bag");
-                        button.style.width = "3rem";
-                    } else {
-                        img.classList.add("h-57", "w-50");
-                    }*/
                 }
                 count = 0;
             }
@@ -87,6 +78,10 @@ fetch("/products.json")
             for(let i = 0; i < 3; i++) {
                 const prodRow = document.createElement("div");
                 prodRow.classList.add("row", "gap-5", "mb-5");
+
+                const titulo = document.getElementById("titulo-destaques");
+                titulo.classList.remove("ms-5");
+                titulo.classList.add("ms-3");
     
                 while(count < 2) {
                     const prodCol = document.createElement("div");

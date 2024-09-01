@@ -76,6 +76,10 @@ fetch("/products.json")
                 const prodRow = document.createElement("div");
                 prodRow.classList.add("row", "gap-5", "mb-5");
 
+                const titulo = document.getElementById("titulo-vendidos");
+                titulo.classList.remove("ms-5");
+                titulo.classList.add("ms-3");
+
                 while(count < 2) {
                     const prodCol = document.createElement("div");
                     prodCol.classList.add("card", "col");
