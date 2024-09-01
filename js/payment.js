@@ -62,6 +62,7 @@ if (cartData != null) {
   payment.appendChild(pagamentoDiv);
 }
 
+const form = document.getElementById("frmPagamento");
 const proceedWithPayment = document.getElementById("btnConcluirPagamento");
 proceedWithPayment.style.marginTop = "1rem";
 proceedWithPayment.addEventListener("click", (e) => {
@@ -79,9 +80,52 @@ proceedWithPayment.addEventListener("click", (e) => {
     return;
   }
 
-  window.alert("Pagamento conncluido");
-  localStorage.setItem("cartData", JSON.stringify([]));
-  window.location.reload();
+  if(form.address.value != '' && form.phoneNumber.value != '' && form.cardNumber.value != '' && form.date.value
+     != '' && form.cvv.value != '' && form.cep.value != '' && form.name.value != '') {
+    window.alert("Pagamento conncluido");
+    localStorage.setItem("cartData", JSON.stringify([]));
+    const freteTxt = document.getElementById("frete");
+    freteTxt.textContent = "Frete: R$ 0.00";
+    window.location.reload();
+  } else {
+    if(form.address.value === '') {
+      form.address.classList.add('border', 'border-danger');
+    } else {
+      form.address.classList.remove('border', 'border-danger');
+    }
+  
+    if(form.phoneNumber.value === '') {
+      form.phoneNumber.classList.add('border', 'border-danger');
+    } else {
+      form.phoneNumber.classList.remove('border', 'border-danger');
+    }
+  
+    if(form.cep.value === '') {
+      form.cep.classList.add('border', 'border-danger');
+    } else {
+      form.cep.classList.remove('border', 'border-danger');
+    }
+  
+    if(form.cardNumber.value === '') {
+      form.cardNumber.classList.add('border', 'border-danger');
+    } else {
+      form.cardNumber.classList.remove('border', 'border-danger');
+    }
+  
+    if(form.date.value === '') {
+      form.date.classList.add('border', 'border-danger');
+    } else {
+      form.date.classList.remove('border', 'border-danger');
+    }
+  
+    if(form.cvv.value === '') {
+      form.cvv.classList.add('border', 'border-danger');
+    } else {
+      form.cvv.classList.remove('border', 'border-danger');
+    }
+
+    window.alert("Preencha todos os campos obrigatórios (*) antes de concluir o pagamento!");
+  }
 });
 
 const calculateFrete = document.getElementById("calculateFrete");
@@ -97,3 +141,16 @@ calculateFrete.addEventListener("click", (e) => {
   const freteTxt = document.getElementById("frete");
   freteTxt.textContent = "Frete: R$ " + 10.00;
 });
+
+window.onload = (e) => {
+  e.preventDefault();
+
+  const activeUser = JSON.parse(localStorage.getItem("activeUser"));
+
+  form.custname.value = activeUser.name;
+  form.custname.disabled = true;
+  form.cpf.value = activeUser.cpf;
+  form.cpf.disabled = true;
+
+  form.name.value = activeUser.name;
+}
