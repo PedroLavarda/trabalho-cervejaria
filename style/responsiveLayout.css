@@ -30,9 +30,9 @@
         margin-left: 2rem;
     }
 
-    /*.navbar #navbarCartBtn {
-        margin-left: 2rem;
-    }*/
+    #navbar h1 {
+        font-size: x-large;
+    }
 
     .navbar #icon-cart {
         height: 1rem;
@@ -82,5 +82,11 @@
 
     .card p {
         font-size: smaller;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #navbar h1 {
+        font-size: xx-large;
     }
 }
