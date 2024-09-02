@@ -2,7 +2,7 @@ const payment = document.getElementById("payment");
 const cartData = JSON.parse(localStorage.getItem("cartData"));
 let totalInCart = 0;
 
-if (window.innerWidth >= 1024) {
+if (window.innerWidth < 1024) {
   if (cartData != null) {
     const pagamentoDiv = document.createElement("div");
     pagamentoDiv.classList.add("border");
@@ -155,4 +155,56 @@ if (window.innerWidth >= 1024) {
 
     form.name.value = activeUser.name;
   }
+
+  const receipt = document.getElementById("totalPayment");
+  receipt.classList.remove("d-flex");
+
+  const pagamento = document.getElementById("preco-pagamento");
+  pagamento.classList.add("mb-4");
+  
+  const titulo = document.getElementById("titulo-pagamento");
+  titulo.classList.remove("ms-5");
+  titulo.classList.add("ms-4");
+
+  payment.classList.remove("ms-5");
+  payment.classList.add("ms-4");
+
+  const dadosDiv = document.getElementById("dadosDiv");
+  dadosDiv.classList.add("mb-4");
+
+  const tituloDados = document.getElementById("data");
+  tituloDados.classList.remove("ms-5");
+  tituloDados.classList.add("ms-4");
+
+  const dados = document.getElementById("dados");
+  dados.classList.remove("ms-5");
+  dados.classList.add("ms-4");
+  dados.style.width = "92vw";
+
+  const custname = document.getElementById("custname");
+  custname.style.width = "100%";
+
+  const address = document.getElementById("address");
+  address.style.width = "100%";
+
+  const phoneNumber = document.getElementById("phoneNumber");
+  phoneNumber.style.width = "100%";
+
+  const cpf = document.getElementById("cpf");
+  cpf.style.width = "100%";
+
+  const cep = document.getElementById("cep");
+  cep.style.width = "100%";
+
+  const tituloInfos = document.getElementById("infos-titulo");
+  tituloInfos.classList.remove("ms-5");
+  tituloInfos.classList.add("ms-4");
+
+  const infos = document.getElementById("infos-dados");
+  infos.classList.remove("ms-5");
+  infos.classList.add("ms-4");
+  infos.style.width = "92vw";
+
+  const infosGeral = document.getElementById("infos-geral");
+  infosGeral.classList.remove("ms-3");
 }

@@ -2,18 +2,18 @@ const cart = document.getElementById("cart");
 const cartData = JSON.parse(localStorage.getItem("cartData"));
 let totalInCart = 0;
 
-if (window.innerWidth >= 1024) {
+if (window.innerWidth < 1024) {
     if (cartData != null) {
         cartData.forEach(product => {
             const separate = document.createElement("div");
-            separate.classList.add("d-flex", "flex-row", "w-50");
+            separate.classList.add("d-flex", "flex-row", "w-80");
 
             const opt = document.createElement("div");
-            opt.classList.add("d-flex", "w-50", "justify-content-end", "align-items-center");
+            opt.classList.add("d-flex", "w-30", "justify-content-end", "align-items-center");
 
             const addQty = document.createElement("input");
             addQty.type = "number";
-            addQty.classList.add("text-center", "w-10", "h-25", "me-5");
+            addQty.classList.add("text-center", "w-30", "h-25", "me-3");
             addQty.min = 1;
             addQty.value = product.quantity;
             addQty.setAttribute("data-id", product.id);
@@ -24,7 +24,7 @@ if (window.innerWidth >= 1024) {
             });
 
             const delP = document.createElement("i");
-            delP.classList.add("me-5", "bi", "bi-trash-fill", "h5");
+            delP.classList.add("me-3", "bi", "bi-trash-fill", "h5", "mt-2");
             delP.setAttribute("data-id", product.id);
             delP.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -48,17 +48,21 @@ if (window.innerWidth >= 1024) {
             itemDiv.classList.add("d-flex", "justify-content-between", "w-100", "border");
 
             const textDiv = document.createElement("div");
-            textDiv.classList.add("d-flex", "flex-column", "justify-content-center", "ms-5");
+            textDiv.classList.add("d-flex", "flex-column", "justify-content-center", "ms-4", "w-50");
 
             const itemImg = document.createElement("img");
             itemImg.src = product.image;
-            itemImg.classList.add("img-fluid", "ms-5", "cart-img");
+            itemImg.classList.add("img-fluid", "ms-2", "cart-img");
+            itemImg.style.width = "5rem";
+            itemImg.style.height = "5rem";
 
             const itemName = document.createElement("h5");
             itemName.innerHTML = product.name;
+            itemName.style.fontSize = "smaller";
 
             const itemPrice = document.createElement("h5");
             itemPrice.innerHTML = "R$" + product.price;
+            itemPrice.style.fontSize = "smaller";
 
             textDiv.appendChild(itemName);
             textDiv.appendChild(itemPrice);
@@ -80,6 +84,10 @@ if (window.innerWidth >= 1024) {
 
         totalPrice.appendChild(price);
         cart.appendChild(totalPrice);
+
+        const botoes = document.getElementById("btnComprar");
+        botoes.classList.remove("mt-4");
+        botoes.classList.add("mt-2");
     } else {
         const emptyCart = document.createElement("p");
         emptyCart.classList.add("h5");
