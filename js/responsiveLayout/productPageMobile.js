@@ -67,10 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
             botaoDiv.style.textAlign = "center";
             botaoDiv.style.width = "100vw";
 
-            const botaoDivComprar = document.createElement("div");
-            botaoDivComprar.style.textAlign = "center";
-            botaoDivComprar.style.width = "100vw";
-
             const button = document.createElement("button");
                 button.textContent = "Adicionar ao carrinho";
                 button.style.marginTop = "2rem";
@@ -119,36 +115,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-            const buttonComprar = document.createElement("button");
-            buttonComprar.textContent = "Comprar agora";
-            buttonComprar.style.marginTop = "1rem";
-            buttonComprar.style.marginRight = "1rem";
-            buttonComprar.style.width = "20rem";
-            buttonComprar.style.height = "2rem";
-            buttonComprar.style.border = "none";
-            buttonComprar.style.borderRadius = "0.2rem";
-            buttonComprar.classList.add("btn-primary");
-            buttonComprar.style.color = "white";
-            buttonComprar.style.alignSelf = "center";
-            buttonComprar.addEventListener('click', () => {
-                const user = JSON.parse(localStorage.getItem('activeUser'));
-                
-                if (user != null) {
-                    window.location.href = 'cart.html';
-                } else {
-                    window.alert('Usuario deve estar logado para comprar um item.');
-                }
-            });
-
             produtoDiv.appendChild(imgDiv);
             textoDiv.appendChild(nome);
             textoDiv.appendChild(preco);
             textoDiv.appendChild(parcela);
             textoDiv.appendChild(descDiv);
             botaoDiv.appendChild(button);
-            botaoDivComprar.appendChild(buttonComprar);
             textoDiv.appendChild(botaoDiv);
-            textoDiv.appendChild(botaoDivComprar);
             produtoDiv.appendChild(textoDiv);
             produtoElement.appendChild(produtoDiv);
 

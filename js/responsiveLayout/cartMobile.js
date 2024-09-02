@@ -21,6 +21,7 @@ if (window.innerWidth < 1024) {
                 e.preventDefault();
                 product.quantity = addQty.value;
                 localStorage.setItem("cartData", JSON.stringify(cartData));
+                window.location.reload();
             });
 
             const delP = document.createElement("i");
