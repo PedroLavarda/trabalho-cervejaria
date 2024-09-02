@@ -136,33 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            const buttonComprar = document.createElement("button");
-            buttonComprar.textContent = "Comprar agora";
-            buttonComprar.style.marginTop = "3rem";
-            buttonComprar.style.width = "15rem";
-            buttonComprar.style.height = "2rem";
-            buttonComprar.style.border = "none";
-            buttonComprar.style.borderRadius = "0.2rem";
-            buttonComprar.classList.add("btn-primary");
-            buttonComprar.style.color = "white";
-            buttonComprar.style.alignSelf = "center";
-            buttonComprar.addEventListener('click', () => {
-                const user = JSON.parse(localStorage.getItem('activeUser'));
-
-                if (user != null) {
-                    window.location.href = 'cart.html';
-                } else {
-                    window.alert('Usuario deve estar logado para comprar um item.');
-                }
-            });
-
             produtoDiv.appendChild(imgDiv);
             textoDiv.appendChild(nome);
             textoDiv.appendChild(preco);
             textoDiv.appendChild(parcela);
             textoDiv.appendChild(descricao);
             botoesDiv.appendChild(button);
-            botoesDiv.appendChild(buttonComprar);
             textoDiv.appendChild(botoesDiv);
             produtoDiv.appendChild(textoDiv);
 

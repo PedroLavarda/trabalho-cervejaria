@@ -21,6 +21,7 @@ if (window.innerWidth >= 1024) {
                 e.preventDefault();
                 product.quantity = addQty.value;
                 localStorage.setItem("cartData", JSON.stringify(cartData));
+                window.location.reload();
             });
 
             const delP = document.createElement("i");
@@ -103,7 +104,7 @@ if (window.innerWidth >= 1024) {
         const cart = JSON.parse(localStorage.getItem('cartData'));
 
         if (cart === null || cart.length === 0) {
-            window.alert('O carrinho está vazio !');
+            window.alert('O carrinho está vazio!');
         } else if (user === null) {
             window.alert("Usuario deve estar logado para realizar uma compra.");
             window.location.href = 'login.html';
