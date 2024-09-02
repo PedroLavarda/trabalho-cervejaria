@@ -17,16 +17,17 @@
     />
     <link rel="stylesheet" href="style/reset.css" type="text/css" />
     <link rel="stylesheet" href="style/style.css" type="text/css" />
+    <link rel="stylesheet" href="style/responsiveLayout.css" type="text/css">
   </head>
   <body>
     <nav id="navbar" class="navbar border-bottom border-1 border-dark"></nav>
 
     <main class="w-100 mt-5 pt-5">
       <form id="frmPagamento">
-        <div class="d-flex">
-          <div class="d-flex payment-receipt me-5">
+        <div id="totalPayment" class="d-flex">
+          <div id="preco-pagamento" class="d-flex payment-receipt me-5">
             <div>
-              <div class="ms-5">
+              <div id="titulo-pagamento" class="ms-5">
                 <h1 class="fw-bolder h2">Dados do pedido</h1>
                 <br />
               </div>
@@ -35,14 +36,14 @@
             </div>
           </div>
 
-          <div class="d-flex payment-data me-5">
-            <div id="data">
-              <div class="ms-5">
+          <div id="dadosDiv" class="d-flex payment-data me-5">
+            <div>
+              <div id="data" class="ms-5">
                 <h1 class="fw-bolder h2">Dados cadastrais</h1>
                 <br />
               </div>
 
-              <div class="d-block border rounded p-4 ms-5">
+              <div id="dados" class="d-block border rounded p-4 ms-5">
                 <div class="mb-3">
                   <label for="custname" class="mb-2"> Nome *</label>
                   <div>
@@ -97,6 +98,7 @@
 
                 <div>
                   <label for="cep" class="mt-3">CEP *</label>
+                  
                   <div>
                     <input
                       type="text"
@@ -105,7 +107,9 @@
                       required
                       size="40%"
                     />
+                  </div>
 
+                  <div class="mt-3">
                     <button id="calculateFrete" type="button" class="btn btn-primary">Calcula frete</button>
                   </div>
                 </div>
@@ -113,14 +117,14 @@
             </div>
           </div>
 
-          <div class="d-flex payment-infos ms-3">
+          <div id="infos-geral" class="d-flex payment-infos ms-3">
             <div id="infos">
-              <div class="ms-5">
+              <div id="infos-titulo" class="ms-5">
                 <h1 class="fw-bolder h2">Selecionar forma de pagamento</h1>
                 <br />
               </div>
 
-              <div class="d-block border rounded p-4 ms-5">
+              <div id="infos-dados" class="d-block border rounded p-4 ms-5">
                 <div class="mb-4">
                   <label for="payment-method"> Método de Pagamento </label>
                   <select id="payment-method" name="payment-method" required>
@@ -205,5 +209,7 @@
     ></script>
     <script src="js/app.js" type="module"></script>
     <script src="js/payment.js" type="module"></script>
+    <script src="js/responsiveLayout/cellphoneLayout.js"></script>
+    <script src="js/paymentMobile.js" type="module"></script>
   </body>
 </html>
