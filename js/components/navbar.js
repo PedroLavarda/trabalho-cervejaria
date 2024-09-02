@@ -3,7 +3,7 @@ export const navbarComponent =
         <img class="img-fluid rounded img-logo ms-5 mt-2" src="assets/images/logo-cervejaria.png" alt="logo-cervejaria" id="logo-cervejaria">
 
         <div class="d-flex flex-column align-items-center justify-content-center">
-            <h1 class="fw-bolder" id="titulo-cervejaria">Cervejaria Caneco Cheio</h1>
+            <h1 class="fw-bolder" id="titulo-cervejaria" style="">Cervejaria Caneco Cheio</h1>
             <div class="d-flex flex-row mt-3 align-items-center justify-content-center">
                 <button class="btn fw-bold" id="botao-home"><a class="text-dark text-decoration-none" href="index.html"> Home </a></button>
                 <button class="btn fw-bold" id="botao-about"><a class="text-dark text-decoration-none" href="about.html"> Quem somos </a></button>
