@@ -54,7 +54,7 @@ fetch("/products.json")
                                 description: data[index]["description"],
                             }));
 
-                            window.location.href = 'procutPage.html';
+                            window.location.href = 'productPage.html';
                         })
                         .catch(error => console.error('Erro ao carregar o JSON:', error));
                 });
@@ -122,7 +122,7 @@ fetch("/products.json")
                                     description: data[index]["description"],
                                 }));
 
-                                window.location.href = 'procutPage.html';
+                                window.location.href = 'productPage.html';
                             })
                             .catch(error => console.error('Erro ao carregar o JSON:', error));
                     });
